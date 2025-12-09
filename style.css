@@ -71,6 +71,7 @@ h1, h2, h3 {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    font-size: 1.2rem; /* Zvětšení velikosti textu */
 }
 
 .nav-links a:hover {
@@ -239,3 +240,13 @@ footer {
 }
 
 
+#recenze h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333; /* černá pro nadpis */
+}
+
+#recenze #shapo-widget-97a6420fd44d36df2cae {
+    max-width: 900px;
+    margin: 0 auto;
+}
