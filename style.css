@@ -469,3 +469,22 @@ footer {
 .opening-hours span:first-child {
     font-weight: 500;
 }
+
+/* Základní styl mapy pro desktop */
+.map-frame {
+    width: 100%;       /* zabere šířku parent containeru */
+    max-width: 900px;  /* omezení max šířky */
+    height: 400px;     /* původní výška */
+    border: 0;
+    display: block;
+    margin: 0 auto;    /* vycentrování */
+}
+
+/* Na mobilních zařízeních (např. iPhone) */
+@media (max-width: 768px) {
+    .map-frame {
+        width: 90%;     /* trochu odsazení od okrajů */
+        height: 90vw;   /* výška = 90% šířky → skoro čtverec */
+        max-height: 500px; /* případné omezení max výšky */
+    }
+}
