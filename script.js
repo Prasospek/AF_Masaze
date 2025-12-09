@@ -16,3 +16,8 @@ navLinks.forEach(link => {
         burger.classList.remove('toggle');
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const yearEl = document.getElementById("year");
+    yearEl.textContent = new Date().getFullYear();
+});
