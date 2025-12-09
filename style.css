@@ -147,13 +147,20 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Služby */
+/* Služby - jednotné rozměry karet */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+
+    /* TOTO je klíčové: každá řada bude mít flexibilní stejnou výšku */
+    grid-auto-rows: 1fr;
+
+    /* zajistí, že položky gridu budou nataženy */
+    align-items: stretch;
 }
 
+/* každá karta zabere 100% výšky grid buňky a použije flex layout pro hezké rozložení */
 .service-card {
     background: white;
     padding: 30px;
@@ -161,7 +168,20 @@ h2 {
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     text-align: center;
     transition: transform 0.3s;
+
+    /* důležité pro vyplnění výšky buňky */
+    height: 100%;
+    min-height: 0;         /* důležité pro správné chování u flex/grid */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* nebo space-between pokud chceš spacing */
 }
+
+/* pokud chceš, aby popis zabíral zbytek prostoru (volitelné) */
+.service-card .card-body {
+    flex: 1;
+}
+
 
 .service-card:hover {
     transform: translateY(-10px);
@@ -432,3 +452,20 @@ footer {
     }
 }
 
+
+.opening-hours {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dvě stejné kolony */
+    max-width: 300px;
+    row-gap: 6px;
+    font-size: 1.1rem;
+}
+
+.opening-hours div {
+    display: contents; /* umožní, aby span prvky tvořily grid */
+}
+
+.opening-hours span:first-child {
+    font-weight: 500;
+}
