@@ -445,18 +445,29 @@ footer {
 
 .button-group {
     display: flex;
+    gap: 40px;
     justify-content: center;
-    gap: 30px;          /* mezera mezi tlačítky */
-    margin-top: 50px;
-    flex-wrap: wrap;    /* aby na mobilu skočily pod sebe */
+    margin-top: 20px;
 }
 
 .button-group .btn {
-    margin-top: 6rem;          /* zrušíme margin z .center-btn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 32px;
+    background-color: #A87F58;
+    color: white;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1;
+    min-height: 60px; /* sjednocení výšky */
 }
 
-.kalendar {
-   width: 24px;
+.kontakt-spodek {
+    width: 24px;
     height: 24px;
     object-fit: contain;
     display: block;
