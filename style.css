@@ -238,15 +238,6 @@ h2 {
     border-radius: 10px;
 }
 
-.center-btn {
-    display: block;
-    text-align: center;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7rem;
-}
-
 /* Footer */
 footer {
     background: #333;
@@ -256,12 +247,6 @@ footer {
     font-size: 0.8rem;
 }
 
-/* Responsivní úpravy */
-@media (max-width: 768px) {
-    .hero-content h1 { font-size: 3rem; }
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
-    .nav-links { gap: 15px; font-size: 0.9rem; }
-}
 
 
 #recenze h2 {
@@ -323,36 +308,6 @@ footer {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Responsivní */
-@media (max-width: 768px) {
-    .burger {
-        display: flex;
-    }
-    .nav-links {
-        display: flex;
-        flex-direction: column;  /* položky pod sebou */
-        max-height: 0;
-        width: 100%;
-        text-align: center;
-        background: rgba(0,0,0,0.85); /* decentní pozadí */
-        overflow: hidden;
-        position: absolute;
-        top: 80px; /* pod navbar */
-        left: 0;
-        padding: 0;
-        border-radius: 0 0 10px 10px;
-        transition: max-height 0.5s ease;
-        z-index: 1000;
-    }
-    .nav-links li {
-        margin: 15px 0;
-    }
-        .nav-active {
-        max-height: 500px; /* dostatečné pro všechny položky */
-    }
-}
-
-
 
 /* Burger menu */
 .burger {
@@ -400,61 +355,6 @@ footer {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Responsivní */
-@media (max-width: 768px) {
-    .burger {
-        display: flex;
-    }
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        max-height: 0;
-        width: 100%;
-        text-align: center;
-    }
-    .nav-links li {
-        margin: 15px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        max-height: 0;
-        width: 100%;
-        text-align: center;
-        background: rgba(0,0,0,0.95);
-        overflow: hidden;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        padding: 0;
-        border-radius: 0 0 10px 10px;
-        transition: max-height 0.5s ease;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-        width: 100%;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 15px 0;
-        color: white;
-        font-size: 1.2rem;
-    }
-
-    .nav-active {
-        max-height: 500px; /* nebo větší, podle počtu položek */
-    }
-
-    .burger {
-        display: flex;
-    }
-}
-
 
 .opening-hours {
     margin-top: 10px;
@@ -483,11 +383,74 @@ footer {
     margin: 0 auto;    /* vycentrování */
 }
 
-/* Na mobilních zařízeních (např. iPhone) */
 @media (max-width: 768px) {
+    /* Hero */
+    .hero-content h1 { 
+        font-size: 3rem; 
+    }
+
+    /* Gridy */
+    .about-grid, .contact-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    /* Navbar */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(0,0,0,0.95);
+        overflow: hidden;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 0;
+        border-radius: 0 0 10px 10px;
+        transition: max-height 0.5s ease;
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .nav-active {
+        max-height: 500px; /* dostatečné pro všechny položky */
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    /* Další */
+    .nav-links { gap: 15px; font-size: 0.9rem; } /* pro drobné úpravy textu */
+    
+    /* Mapy */
     .map-frame {
         width: 90%;     /* trochu odsazení od okrajů */
         height: 90vw;   /* výška = 90% šířky → skoro čtverec */
         max-height: 500px; /* případné omezení max výšky */
     }
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;          /* mezera mezi tlačítky */
+    margin-top: 50px;
+    flex-wrap: wrap;    /* aby na mobilu skočily pod sebe */
+}
+
+.button-group .btn {
+    margin-top: 6rem;          /* zrušíme margin z .center-btn */
 }
