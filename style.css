@@ -454,3 +454,10 @@ footer {
 .button-group .btn {
     margin-top: 6rem;          /* zrušíme margin z .center-btn */
 }
+
+.kalendar {
+   width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
