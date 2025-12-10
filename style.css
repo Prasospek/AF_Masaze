@@ -412,6 +412,30 @@ footer {
         z-index: 1000;
     }
 
+      .button-group {
+    flex-direction: column;
+    gap: 1rem;               /* méně mezery než na desktopu */
+    padding: 0 20px;         /* odsazení zleva/prava aby tlačítka nepřesahovala */
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;     /* centrování při max-width na tlačítkách */
+  }
+
+  .button-group .btn {
+    width: 100%;
+    max-width: 520px;        /* zabraňuje příliš širokým tlačítkům na velkých mobilech */
+    min-height: 56px;        /* udrží podobnou výšku */
+    padding: 12px 20px;
+    justify-content: center;
+  }
+
+    /* Obrázky v tlačítkách zůstanou malé a nebudou tlačítko roztahovat */
+  .button-group .btn img {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
     .nav-links li {
         margin: 15px 0;
         width: 100%;
