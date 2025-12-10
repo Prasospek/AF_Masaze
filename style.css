@@ -447,7 +447,7 @@ footer {
     display: flex;
     gap: 40px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 5rem;
 }
 
 .button-group .btn {
@@ -472,3 +472,4 @@ footer {
     object-fit: contain;
     display: block;
 }
+
