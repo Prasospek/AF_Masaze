@@ -425,7 +425,7 @@ footer {
     }
 
     .nav-active {
-        max-height: 500px; /* dostatečné pro všechny položky */
+        max-height: 1500px; /* dostatečné pro všechny položky */
     }
 
     .burger {
