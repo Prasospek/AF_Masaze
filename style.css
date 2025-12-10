@@ -401,7 +401,7 @@ footer {
         max-height: 0;
         width: 100%;
         text-align: center;
-        background: rgba(0,0,0,0.95);
+        tbackground: rgba(166, 130, 94, 0.95);
         overflow: hidden;
         position: absolute;
         top: 80px;
@@ -415,6 +415,12 @@ footer {
     .nav-links li {
         margin: 15px 0;
         width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:active {
+        background: rgba(255,255,255,0.1); /* jemné podbarvení při kliknutí */
+        border-radius: 5px;
     }
 
     .nav-links a {
