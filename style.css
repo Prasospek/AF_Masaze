@@ -375,7 +375,7 @@ footer {
 
 /* Základní styl mapy pro desktop */
 .map-frame {
-    width: 100%;       /* zabere šířku parent containeru */
+    width: 150%;       /* zabere šířku parent containeru */
     max-width: 900px;  /* omezení max šířky */
     height: 400px;     /* původní výška */
     border: 0;
