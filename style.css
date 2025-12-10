@@ -473,3 +473,10 @@ footer {
     display: block;
 }
 
+.oteviraci-doba {
+    font-size: 3.5rem;     /* větší písmo */
+    font-weight: 700;    /* silný text */
+    margin-top: 20px;    /* lehká mezera nahoře */
+    margin-bottom: 10px; /* mezera pod nadpisem */
+}
+
